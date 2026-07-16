@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.bg {
+    position: relative;
+    min-height: 577px;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+
+
+    width: 2200px;
+    height: 800px;
+
+    left: -420px;
+    top: -523.91px;
+
+
+    background:
+        radial-gradient(ellipse at center,
+            rgba(255, 203, 87, 1) 0%,
+            rgba(255, 203, 87, 0) 80%,
+            rgba(255, 203, 87, 0) 50%),
+        radial-gradient(ellipse at center,
+            rgba(255, 51, 61, 1) 0%,
+            rgba(255, 51, 61, 0) 60%,
+            rgba(255, 51, 61, 0) 50%),
+
+        radial-gradient(ellipse at center,
+            rgba(144, 224, 255, 1) 0%,
+            rgba(144, 224, 255, 0) 30%,
+            rgba(144, 224, 255, 0) 100%),
+        radial-gradient(ellipse at center,
+            rgba(255, 51, 61, 1) 0%,
+            rgba(255, 51, 61, 0) 30%,
+            rgba(255, 51, 61, 0) 50%),
+
+        radial-gradient(ellipse at center,
+            rgba(169, 96, 238, 1) 0%,
+            rgba(169, 96, 238, 0) 30%,
+            rgba(169, 96, 238, 0) 100%),
+        radial-gradient(ellipse at center,
+            rgba(169, 96, 238, 1) 0%,
+            rgba(169, 96, 238, 0) 30%,
+            rgba(169, 96, 238, 0) 100%),
+        radial-gradient(ellipse at center,
+            rgba(144, 224, 255, 1) 0%,
+            rgba(144, 224, 255, 0) 30%,
+            rgba(144, 224, 255, 0) 100%),
+        radial-gradient(ellipse at center,
+            rgba(144, 224, 255, 1) 0%,
+            rgba(144, 224, 255, 0) 30%,
+            rgba(144, 224, 255, 0) 100%),
+        #A960EE;
+
+
+
+
+    transform: rotate(-12deg);
+}
+
+.bg>* {
+    position: relative;
+    z-index: 1;
+}
