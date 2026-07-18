@@ -5,20 +5,21 @@
   ====================== */
     --primary: #0A2540;
     --primary-hover: #0A2540;
-    --accent: #06b6d4;
+    --accent: #00D4FF;
     --accent-purple: #8b5cf6;
 
     /* =====================
      BACKGROUND COLORS
   ====================== */
     --bg-primary: rgba(66, 71, 112, 0.06);
+    --bg--secondary: #0A2540;
 
     /* =====================
      TEXT COLORS
   ====================== */
     --text-light: #ffffff;
-    --text-light-secondary: #cbd5e1;
-    --text-light-muted: #94a3b8;
+    --text-light-secondary: #ADBDCC;
+    --text-light-muted: #ADBDCC;
     --text-blue: #635BFF;
 
     /* Text on light backgrounds */
@@ -259,7 +260,7 @@ header {
 }
 
 .section__header {
-    text-align: center;
+    text-align: left;
 }
 
 .section__badge {
@@ -479,7 +480,8 @@ header {
     padding-block: var(--space-3xl);
     color: var(--primary-hover);
     background-color: var(--bg-primary);
-    padding-bottom: 50rem;
+    padding-bottom: 51rem;
+    overflow: hidden;
 }
 
 .platform__container {
@@ -500,6 +502,7 @@ header {
     justify-content: left;
     width: 100%;
     margin-bottom: var(--space-lg);
+    margin-inline: unset;
     max-width: 1080px;
     gap: 5rem;
 
@@ -542,10 +545,12 @@ header {
     position: relative;
     bottom: 100px;
     max-width: 292px;
+    z-index: -3;
 }
 
 .platform__image.mobile img {
     width: 290px;
+
 }
 
 .platform__image.radar img {
@@ -554,4 +559,51 @@ header {
     left: -80px;
     width: 205%;
     max-width: none;
+    z-index: -2;
+}
+
+.developer {
+    padding-block: var(--space-3xl);
+}
+
+.developer__bg {
+    position: relative;
+}
+
+.developer__bg::before {
+    content: "";
+    position: absolute;
+    background-color: var(--bg--secondary);
+    z-index: -1;
+    width: 1800px;
+    height: 1000px;
+    transform: rotate(-6deg);
+    top: -180px;
+    left: -70px;
+}
+
+
+.developer .section__badge {
+    color: var(--accent);
+}
+
+
+.developer .section__title {
+    color: var(--text-light);
+}
+
+.developer .section__description,
+.developer__content {
+    color: var(--text-light-muted);
+}
+
+
+.developer__data {
+    display: grid;
+    grid-template-columns: auto 540px;
+    gap: 3rem;
+}
+
+.developer__terminals {
+    width: 1000px;
 }
