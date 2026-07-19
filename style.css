@@ -287,12 +287,6 @@ header {
     font-size: var(--font-size-base);
 }
 
-
-.container {
-    max-width: var(--container-width);
-    margin-inline: var(--space-md);
-}
-
 .section {
     padding-block: var(--space-2xl);
 }
@@ -366,7 +360,6 @@ header {
 .container {
     max-width: 1080px;
     margin: 0 auto;
-    padding-inline: 1.5rem;
     /* Prevents content touching screen edges */
 }
 
@@ -482,6 +475,8 @@ header {
     background-color: var(--bg-primary);
     padding-bottom: 51rem;
     overflow: hidden;
+    position: relative;
+    z-index: -1;
 }
 
 .platform__container {
@@ -576,7 +571,7 @@ header {
     background-color: var(--bg--secondary);
     z-index: -1;
     width: 1800px;
-    height: 1000px;
+    height: 1200px;
     transform: rotate(-6deg);
     top: -180px;
     left: -70px;
@@ -606,4 +601,41 @@ header {
 
 .developer__terminals {
     width: 1000px;
+}
+
+.developer__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-block: var(--space-2xl);
+}
+
+.developer__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-inline: var(--space-md);
+}
+
+.developer__card-title {
+    color: var(--text-light);
+    position: relative;
+    font-weight: var(--font-weight-regular);
+}
+
+.developer__card-title::before {
+    content: "|";
+    position: absolute;
+    left: -1rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--accent);
+}
+
+.developer__card-description {
+    font-weight: var(--font-weight-regular);
+}
+
+.developer .button {
+    padding: unset;
+    color: var(--accent);
+    margin-block: var(--space-sm);
 }
