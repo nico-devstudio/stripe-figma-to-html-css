@@ -114,6 +114,8 @@
     --space-3xl: 6rem;
     /* 96px */
 
+    --space-4xl: 8rem;
+
     /* =====================
        SHADOWS
     ====================== */
@@ -357,6 +359,11 @@ header {
     background: transparent;
 }
 
+.blue {
+    color: var(--text-blue);
+}
+
+
 .container {
     max-width: 1080px;
     margin: 0 auto;
@@ -511,7 +518,7 @@ header {
     text-decoration: underline;
 }
 
-.underline.blue {
+.blue {
     color: var(--text-blue);
 }
 
@@ -570,7 +577,7 @@ header {
     position: absolute;
     background-color: var(--bg--secondary);
     z-index: -1;
-    width: 1800px;
+    width: 110%;
     height: 1200px;
     transform: rotate(-6deg);
     top: -180px;
@@ -638,4 +645,161 @@ header {
     padding: unset;
     color: var(--accent);
     margin-block: var(--space-sm);
+}
+
+
+
+.rectangle {
+    position: relative;
+
+}
+
+.rectangle.accent::before {
+    position: absolute;
+    content: "";
+    width: 540px;
+    height: 70px;
+    background-color: #80E9FF;
+    transform: rotate(-6deg);
+    top: -30px;
+    right: -5px;
+    z-index: -2;
+}
+
+.rectangle.purple::before {
+    position: absolute;
+    content: "";
+    width: 415px;
+    height: 34px;
+    background-color: #7A73FF;
+    transform: rotate(-6deg);
+    right: 30px;
+    top: 20px;
+}
+
+/*========== Advantages Section ==========*/
+.advantages {
+    margin-block: var(--space-4xl);
+}
+
+.advantages__container {
+    display: grid;
+    color: var(--bg--secondary);
+    gap: var(--space-md);
+}
+
+.advantages .section__title {
+    max-width: 700px;
+    color: var(--bg--secondary);
+    font-size: var(--font-size-4xl);
+}
+
+.advantages__content {
+    display: flex;
+}
+
+.advantages__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-inline: var(--space-md);
+}
+
+.advantages__card-title {
+    position: relative;
+    font-weight: var(--font-weight-medium);
+}
+
+
+
+.advantages__card-title::before {
+    content: "|";
+    position: absolute;
+    left: -1rem;
+}
+
+.advantages__card-description {
+    color: var(--text-dark);
+}
+
+/*========== Enterprise section ==========*/
+
+.enterprise {
+    margin-block: var(--space-4xl);
+    background-color: var(--bg-primary);
+}
+
+.enterprise__container {
+    display: grid;
+    gap: var(--space-2xl);
+}
+
+.enterprise .section__title {
+    color: var(--primary);
+    font-size: var(--font-size-4xl);
+}
+
+.enterprise .section__description {
+    color: var(--text-dark);
+    margin: unset;
+    max-width: 720px;
+    margin-bottom: var(--space-md);
+}
+
+.enterprise__image {
+    position: relative;
+    height: 410px;
+}
+
+.enterprise__img {
+    position: absolute;
+    display: inline-block;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.enterprise__image-logo {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-md);
+}
+
+.enterprise__image-title {
+    position: absolute;
+    height: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: var(--space-md);
+    gap: var(--space-xs);
+}
+
+.enterprise__image-title h3 {
+    font-weight: var(--font-weight-medium);
+}
+
+.enterprise__image-title .button {
+    background-color: unset;
+    padding-inline: unset;
+}
+
+.enterprise__line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            #0066B1 0% 25%,
+            #EFA82E 25% 50%,
+            #42B0D5 50% 75%,
+            #C54647 75% 100%);
+}
+
+.enterprise__company-logo {
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    justify-content: space-around;
+    align-items: center;
+    place-items: center;
 }
