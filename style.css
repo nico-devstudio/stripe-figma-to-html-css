@@ -178,7 +178,6 @@ ul {
 a {
     text-decoration: none;
     color: var(--text-light);
-    line-height: 0;
 }
 
 img {
@@ -202,7 +201,7 @@ body {
 
 header {
     position: relative;
-    z-index: 1000;
+    z-index: var(--z-fixed);
 }
 
 main {
@@ -212,7 +211,7 @@ main {
 .button {
     background-color: var(--primary);
     display: inline-block;
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-full);
     font-weight: var(--font-weight-semibold);
     text-decoration: none;
@@ -855,7 +854,7 @@ main {
 
 .global {
     position: relative;
-    padding-block: var(--space-3xl);
+    padding-block: var(--space-3xl) var(--space-4xl);
 
 }
 
@@ -865,7 +864,7 @@ main {
     top: -7%;
     left: -10%;
     width: 120%;
-    height: 110%;
+    height: 120%;
     background-color: #0A2540;
     transform: rotate(-6deg);
     z-index: 1;
@@ -875,7 +874,7 @@ main {
 .globe-bg {
     position: absolute;
     z-index: 2;
-    top: -15%;
+    top: -10%;
     right: -15%;
     width: 125%;
 }
@@ -928,4 +927,114 @@ main {
 
 .global__card-description {
     color: var(--text-light-secondary);
+}
+
+/*========== CTA section ==========*/
+
+.cta {
+    position: relative;
+    padding-block: var(--space-4xl);
+    z-index: 1;
+    background-color: var(--white);
+}
+
+.cta__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cta .section__title {
+    font-size: var(--font-size-3xl);
+}
+
+.cta .section__description {
+    color: var(--text-dark);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-lg);
+    width: 390px;
+    margin-inline: unset;
+
+}
+
+.cta .button--secondary {
+    color: var(--text-blue);
+}
+
+.cta__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    color: var(--text-dark);
+}
+
+.cta__card {
+    position: relative;
+    padding-inline: var(--space-sm);
+}
+
+.pricetag-accent {
+    position: absolute;
+    left: -15%;
+    top: 5%;
+}
+
+.cta__card-title {
+    position: relative;
+    margin-block: var(--space-sm);
+}
+
+.cta__card-title::before {
+    content: "|";
+    position: absolute;
+    color: blue;
+    left: -10%;
+}
+
+.cta__card-link {
+    color: var(--text-blue);
+    margin-top: var(--space-md);
+    display: inline-block;
+}
+
+/*========== Footer section ==========*/
+
+.footer {
+    position: relative;
+    padding-block: var(--space-4xl);
+    background-color: var(--bg-primary);
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--text-dark-secondary);
+}
+
+.footer__content.stripe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__info p {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.footer__info .country {
+    margin-block: var(--space-xs);
+}
+
+.footer__title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-sm);
+}
+
+.footer__title.inside {
+    margin-top: var(--space-md);
+}
+
+.footer__link {
+    color: var(--text-dark);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
 }
